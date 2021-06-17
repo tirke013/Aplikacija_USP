@@ -1,0 +1,8 @@
+util\SessionUtils.class
+entities\Putnik.class
+util\DB.class
+ManagedBeans\UserMB.class
+entities\Korisnik.class
+entities\Vozac.class
+com\mycompany\smartbus\JAXRSConfiguration.class
+com\mycompany\smartbus\resources\JavaEE8Resource.class

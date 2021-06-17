@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>SmartBus</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="./tmplt2.xhtml">
+            <ui:define name="top">
+                <span style="color: white"><h1>SmartBus Belgrade</h1></span>
+            </ui:define>
+            <ui:define name="content2">
+                <div class="mapouter" align="center">
+                    <div class="gmap_canvas">
+                        <iframe width="640" height="480" id="gmap_canvas" src="https://maps.google.com/maps?q=Beograd&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <br/>
+                        <style>.mapouter{position:relative; text-align:right; height:480px; width:640; margin: 0 auto;}</style>
+                        <style>.gmap_canvas {overflow:hidden; background:none!important; height:480px; width:640px; margin: 0 auto;}</style>
+                    </div>
+                </div>
+                <br/><br/>
+                <h:form>
+                    Odaberite tip smetnje:<br/><br/>
+                    <h:selectOneMenu>
+                        <f:selectItem itemLabel="Gužva na putu"></f:selectItem>
+                        <f:selectItem itemLabel="Veliki broj putnika na stanici"></f:selectItem>
+                    </h:selectOneMenu><br/><br/>
+                    <h:commandButton value="Prijavi gužvu" class="button"></h:commandButton><br/>
+                </h:form>
+            </ui:define>
+          </ui:composition>
+    </h:body>
+</html>
+

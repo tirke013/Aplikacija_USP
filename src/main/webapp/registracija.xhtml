@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>SmartBus - registracija</title>
+        <h:outputStylesheet library="css" name="default.css"></h:outputStylesheet>
+    </h:head>
+    <h:body>
+        <ui:composition template="./tmplt.xhtml">
+            <ui:define name="top">
+                <span style="color: white"><h1>SmartBus Belgrade</h1></span>
+            </ui:define>
+            <ui:define name="content">
+        <h:form>
+            <h:panelGrid columns="2">
+                Korisnicko ime:
+                <h:inputText value="#{userMB.korisnik.username}"></h:inputText>
+                Sifra:
+                <h:inputSecret value="#{userMB.korisnik.password}"></h:inputSecret>
+            </h:panelGrid>
+            <br/><br/>
+            <h:outputText style="color:red" value="Korisnik sa datim korisnickim imenom vec postoji" rendered="#{userMB.korisnik.greska}"></h:outputText>
+            <br/>
+            <h:commandButton class="button" action="#{userMB.registracija()}" value="Registruj se"></h:commandButton>
+        
+        </h:form>
+                </ui:define>
+            </ui:composition>
+    </h:body>
+</html>
+
